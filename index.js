@@ -1,6 +1,19 @@
 
 
+const btn = document.getElementById('btn');
+const btn2 = document.getElementById('btn-2');
+const menu = document.getElementById('menu-ul');
+const menuIcon = document.getElementById('menu-icon');
+const closeIcon = document.getElementById('close-icon');
 
+btn.addEventListener('click', () => {
+  // Toggle the menu visibility
+  menu.classList.toggle('hidden');
+
+  // Toggle between menu and close icons
+  menuIcon.classList.toggle('hidden');
+  closeIcon.classList.toggle('hidden');
+});
 
 
 // img-slider////
@@ -41,3 +54,25 @@ showSlide(index);
 
 
 
+$(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+     
+    });  
+  });
+  $(document).ready(function() {
+    $('#autoWidth-1').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth-1').removeClass('cS-hidden');
+        } 
+    });  
+  });
+
+
+
+
+
+   
