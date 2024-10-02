@@ -16,41 +16,38 @@ btn.addEventListener('click', () => {
 });
 
 
-// img-slider////
-const slider = document.getElementById('slider');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-const images = slider.getElementsByTagName('img');
-let index = 0;
+// mobile toggle
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+});
 
-function showSlide(newIndex) {
-    const totalSlides = images.length;
-    if (newIndex >= totalSlides) {
-        index = 0;
-    } else if (newIndex < 0) {
-        index = totalSlides - 1;
-    } else {
-        index = newIndex;
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slider img');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    // Update slider position
+    function updateSliderPosition() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
-    slider.style.transform = `translateX(${-index * 100}%)`;
-}
 
-prevButton.addEventListener('click', () => {
-    showSlide(index - 1);
+    // Next button functionality
+    document.getElementById('next').addEventListener('click', function () {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSliderPosition();
+    });
+
+    // Previous button functionality
+    document.getElementById('prev').addEventListener('click', function () {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSliderPosition();
+    });
 });
 
-nextButton.addEventListener('click', () => {
-    showSlide(index + 1);
-});
 
-// Optional: auto-slide every 3 seconds
-setInterval(() => {
-    showSlide(index + 1);
-}, 3000);
-
-// Initial display
-showSlide(index);
-// ./img-slider///
 
 
 
@@ -64,10 +61,13 @@ $(document).ready(function() {
   $(document).ready(function() {
     $('#autoWidth-1').lightSlider({
         autoWidth:true,
-        loop:true,
-        onSliderLoad: function() {
-            $('#autoWidth-1').removeClass('cS-hidden');
-        } 
+        loop:true, 
+    });  
+  });
+  $(document).ready(function() {
+    $('#autoWidth-2').lightSlider({
+        autoWidth:true,
+        loop:true, 
     });  
   });
 

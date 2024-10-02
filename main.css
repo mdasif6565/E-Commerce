@@ -3,33 +3,26 @@
 @tailwind utilities;
 /* img-slider */
 .slider-container {
-    position: relative;
+    @apply relative;
+    
 }
 .slider-images {
-    display: flex;
+    @apply flex;
     transition: transform 0.5s ease-in-out;
 }
 .slider-images img {
-    width: 100%;
-    flex-shrink: 0;
+    @apply w-full flex-shrink-0;
 }
 .control-button {
-    position: absolute;
-    top: 50%;
+    @apply absolute top-2/4 bg-transparent text-gray-500 border p-2 cursor-pointer w-10 h-10;
     transform: translateY(-50%);
-    background: transparent;
-    color: gray;
-    border: 1px solid gray;
-    padding: 10px;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
 }
+
 .prev-button {
-    left: 10px;
+    @apply left-2;
 }
 .next-button {
-    right: 10px;
+    @apply right-2;
 }
 /* ./img-slider */
 
@@ -54,23 +47,13 @@
     transform: scale(1.1);
 }
 .bottom-arrow {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
+    @apply flex items-center justify-center absolute cursor-pointer -bottom-5 left-1/2 w-7 h-7 bg-white border border-gray-200;
     transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
-    background: white;
-    border: 2px solid #ddd;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+
 }
 .bottom-arrow:hover {
-    background: #f3f4f6;
-    border-color: #bbb;
+    @apply bg-white border-gray-400;
 }
 .bottom-arrow::before {
     content: "↓";
@@ -108,12 +91,13 @@
 
 /* Show the dropdown when hovering over the parent <li> */
 .group:hover .hidden {
-    display: block;
+    @apply block;
+    
 }
 
 
 .group:hover .dropdown-content {
-    display: block;
+    @apply block;
 }
 
 
@@ -126,255 +110,140 @@
 }
 
 
-
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
 .button-container {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    background-color: white;
-    padding: 0.75rem 2.5rem; /* Adjust the padding as needed */
-    transition: background-color 0.3s ease-in-out;
-    cursor: pointer;
-    border: 1px solid transparent; /* Add border for better appearance */
+  @apply relative inline-flex items-center bg-[white] transition-[background-color] duration-[0.3s] ease-[ease-in-out] cursor-pointer border px-10 py-3 border-solid border-transparent hover:bg-neutral-100;
+  /* Adjust the padding as needed */
+  /* Add border for better appearance */
 }
-
 .button-container:hover {
-    background-color: #f5f5f5; /* Adjust hover background color as needed */
+  /* Adjust hover background color as needed */
 }
-
 .button-text {
-    display: flex;
-    align-items: center;
-    transition: transform 0.2s ease-in-out;
+  @apply flex items-center transition-transform duration-[0.2s] ease-[ease-in-out];
 }
-
 .button-container:hover .button-text {
-    transform: translateX(-10px);
+  @apply -translate-x-2.5;
 }
-
 .button-img {
-    width: 1rem; /* Adjust size as needed */
-    height: 1rem; /* Adjust size as needed */
-    margin-left: 0.5rem; /* Adjust spacing as needed */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+  @apply w-4 h-4 opacity-0 transition-opacity duration-[0.3s] ease-[ease-in-out] ml-2;
+  /* Adjust size as needed */
+  /* Adjust size as needed */
+  /* Adjust spacing as needed */
 }
-
 .button-container:hover .button-img {
-    opacity: 1;
+  @apply opacity-100;
 }
-
-
-
 .button-box {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    background-color: transparent;
-    border: 2px solid black;
-    padding: 0.75rem 2.5rem; /* Adjust the padding as needed */
-    transition: background-color 0.3s ease-in-out;
-    cursor: pointer; /* Add border for better appearance */
+  @apply relative inline-flex items-center bg-transparent transition-[background-color] duration-[0.3s] ease-[ease-in-out] cursor-pointer px-10 py-3 border-2 border-solid border-[black] hover:bg-[black] hover:text-[white];
+  /* Adjust the padding as needed */
+  /* Add border for better appearance */
 }
-
 .button-box:hover {
-    background-color: black;
-    color: white; /* Adjust hover background color as needed */
+  /* Adjust hover background color as needed */
 }
-
 .button-txt {
-    display: flex;
-    align-items: center;
-    transition: transform 0.2s ease-in-out;
+  @apply flex items-center transition-transform duration-[0.2s] ease-[ease-in-out];
 }
-
 .button-box:hover .button-txt {
-    transform: translateX(-10px);
+  @apply -translate-x-2.5;
 }
-
 .button-imgs {
-    width: 1rem; /* Adjust size as needed */
-    height: 1rem; /* Adjust size as needed */
-    margin-left: 0.5rem; /* Adjust spacing as needed */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+  @apply w-4 h-4 opacity-0 transition-opacity duration-[0.3s] ease-[ease-in-out] ml-2;
+  /* Adjust size as needed */
+  /* Adjust size as needed */
+  /* Adjust spacing as needed */
 }
-
 .button-box:hover .button-imgs {
-    opacity: 1;
-    color: white;
+  @apply opacity-100 text-[white];
 }
-
-
-
-
-
-.button-container-1{
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    background-color:#9FD62E ;
-    padding: 0.75rem 1.5rem; /* Adjust the padding as needed */
-    transition: background-color 0.3s ease-in-out;
-    cursor: pointer;
-    border: 1px solid transparent; /* Add border for better appearance */
+.button-container-1 {
+  @apply relative inline-flex items-center bg-[#9FD62E] transition-[background-color] duration-[0.3s] ease-[ease-in-out] cursor-pointer border px-6 py-3 border-solid border-transparent hover:bg-[#9FD62E];
+  /* Adjust the padding as needed */
+  /* Add border for better appearance */
 }
 .button-container-1:hover {
-    background-color: #9FD62E; /* Adjust hover background color as needed */
+  /* Adjust hover background color as needed */
 }
 .button-text-1 {
-    display: flex;
-    align-items: center;
-    transition: transform 0.2s ease-in-out;
+  @apply flex items-center transition-transform duration-[0.2s] ease-[ease-in-out];
 }
 .button-container-1:hover .button-text-1 {
-    transform: translateX(-10px);
+  @apply -translate-x-2.5;
 }
 .button-img-1 {
-    width: 1rem; /* Adjust size as needed */
-    height: 1rem; /* Adjust size as needed */
-    margin-left: 0.5rem; /* Adjust spacing as needed */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+  @apply w-4 h-4 opacity-0 transition-opacity duration-[0.3s] ease-[ease-in-out] ml-2;
+  /* Adjust size as needed */
+  /* Adjust size as needed */
+  /* Adjust spacing as needed */
 }
 .button-container-1:hover .button-img-1 {
-    opacity: 1;
+  @apply opacity-100;
 }
 
 
 
 
 
-
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
 .flip-card {
-    position: relative;
-    width: 5rem; /* Adjust width as needed */
-    height: 5rem; /* Adjust height as needed */
-    perspective: 1000px; /* Add perspective to the flip effect */
+  @apply relative w-20 h-20;
+  /* Adjust width as needed */
+  /* Adjust height as needed */
+  perspective: 1000px;
+  /* Add perspective to the flip effect */
 }
-
 .flip-card-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: transform .9s;
-    transform-style: preserve-3d;
+  @apply absolute w-full h-full transition-transform duration-[0.9s];
+  transform-style: preserve-3d;
 }
-
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Hide the back face of the card */
-}
-
-.flip-card-front {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-}
-
+.flip-card-front,
 .flip-card-back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    transform: rotateY(180deg);
+  @apply absolute w-full h-full;
+  backface-visibility: hidden;
+  /* Hide the back face of the card */
 }
-
+.flip-card-front {
+  @apply flex justify-center items-center bg-transparent;
+}
+.flip-card-back {
+  @apply flex justify-center items-center text-[white];
+  transform: rotateY(180deg);
+}
 .flip-card-img {
-    width: 100%; /* Make the image fill the card */
-    height: auto; /* Maintain aspect ratio */
+  @apply w-full h-auto;
+  /* Make the image fill the card */
+  /* Maintain aspect ratio */
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .slide {
-    box-sizing: border-box;
-  }
-  
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    background-color: rgba(0,0,0,0.5);
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-  }
-  
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
-  }
-
-
-
-  
 .item-a {
-    position: relative;
+  @apply relative;
 }
-
 .item-a .card {
-    position: relative;
-    width: 320px;
-    height: 400 px;
-    overflow: hidden;
+  @apply relative w-72 p-4 h-[400_px] overflow-hidden;
 }
-
-
-
-
-
-
-
 .item-a .card .contentBx {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 90;
+  @apply absolute w-full h-[100px] text-center transition-[1s] z-[90] bottom-0;
 }
-
 .item-a .card:hover .contentBx {
-    height: 210px;
+  @apply h-[210px];
+}
+.item-a .card .contentBx a {
+  @apply inline-block no-underline font-semibold text-[#111] opacity-0 translate-y-[50px] transition-[0.5s] mt-[110px] px-5 py-2.5 border-l-[gray] border-l border-solid;
+  background: #fff;
 }
 
-.item-a .card .contentBx a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #fff;
-    margin-top: 110px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #111;
-    opacity: 0;
-    border-left: 1px solid gray;
-    transform: translateY(50px);
-    transition: .5s;
-}
 
 .item-a .card:hover .contentBx a {
     opacity: 1;
