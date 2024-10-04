@@ -2,28 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 /* img-slider */
-.slider-container {
-    @apply relative;
-    
-}
-.slider-images {
-    @apply flex;
-    transition: transform 0.5s ease-in-out;
-}
-.slider-images img {
-    @apply w-full flex-shrink-0;
-}
-.control-button {
-    @apply absolute top-2/4 bg-transparent text-gray-500 border p-2 cursor-pointer w-10 h-10;
-    transform: translateY(-50%);
-}
 
-.prev-button {
-    @apply left-2;
-}
-.next-button {
-    @apply right-2;
-}
 /* ./img-slider */
 
 .box-shadow-custom {
@@ -195,7 +174,7 @@
   @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
 */
 .flip-card {
-  @apply relative w-20 h-20;
+  @apply relative w-16 h-16 lg:w-20 lg:h-20;
   /* Adjust width as needed */
   /* Adjust height as needed */
   perspective: 1000px;

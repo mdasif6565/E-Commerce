@@ -9,9 +9,10 @@
 </head>
 <body class="relative">
     <div class="">
-    
         <!-- mobile header -->
-         <header class="bg-white shadow-md lg:hidden">
+        <section>
+        <!-- mobile header -->
+        <header class="bg-white shadow-md lg:hidden">
             <div class="container mx-auto px-4 py-4 flex justify-between items-center">
                 <!-- Logo -->
                 <div class="text-2xl font-bold">
@@ -50,11 +51,15 @@
                 </div>
             </div>
         </header>
+        <!-- ./mobile header -->
+
+        </section>
+        <!-- ./mobile header -->
 
 
         <!-- header -->
-        <section class="h-36">
-            <header class="hidden lg:block h-full w-full px-20 py-6">
+        <section class="h-36 hidden lg:block">
+            <header class=" h-full w-full px-20 py-6">
                 <div class="h-full w-full flex flex-row">
                     <!-- logo -->
                     <div class="w-[350px]">
@@ -179,52 +184,50 @@
 
                     <!-- icon and menu bar -->
                     <div class=" flex items-center justify-end">
-                            <div class="flex space-x-10">
-                                <div class="w-6">
-                                    <img src="images/search-svgrepo-com.png">
-                                   
-                                </div>
-                                <div class="w-6">
-                                    <img src="images/shopping-bag-1143-svgrepo-com.png">
-                                </div>
-                                <div class="w-6" >
-                                    <button id="btn">
-                                        <img id="menu-icon" src="images/menu-svgrepo-com.png">
-                                    </button>
-                                    
-                                    
-                                   
-                                </div>
+                        <div class="flex space-x-10">
+                            <div class="w-6">
+                                <img src="images/search-svgrepo-com.png">
+                               
                             </div>
-                            <div class=" absolute right-0 top-0 h-full z-20 bg-red-400 w-[400px] hidden" id="menu-ul">
-                                <div class="flex items-center justify-center">
-                                    <button id="btn-2">
-                                        <img id="close-icon" class="w-20" src="images/close-sm-svgrepo-com.png">
-                                    </button>
-                                    
-                                </div>
-                                <ul class="space-y-2 pl-8">
-                                    <li><a>log in</a></li>
-                                    <li><a>log in</a></li>
-                                    <li><a>log in</a></li>
-                                    <li><a>log in</a></li>
-                                    <li><a>log in</a></li>
-                                </ul>
+                            <div class="w-6">
+                                <img src="images/shopping-bag-1143-svgrepo-com.png">
                             </div>
+                            <div class="w-6" >
+                                <button id="btn">
+                                    <img id="menu-icon" src="images/menu-svgrepo-com.png">
+                                </button>
+                            </div>
+                        </div> 
                     </div>
                     <!-- ./icon and menu bar -->
                 </div>
             </header>
         </section>
         <!-- ./header -->
+
+        <!-- image slider -->
+         <section>
+            <div class="overflow-hidden relative h-64 lg:h-auto">
+                <div class="">
+                    <div id="slider" class="slider-images flex transition-transform duration-300">
+                        <img class="object-cover" src="images/banner-1.png" alt="Slide 1">
+                        <img class="object-cover" src="images/banner-3.png" alt="Slide 3">
+                        <img class="object-cover" src="images/banner-4.jpg" alt="Slide 4">
+                    </div>
+                    <button class="absolute top-1/2 left-4 transform -translate-y-1/2 border p-2 w-10 h-10 rounded-full shadow" id="prev">&#10094;</button>
+                    <button class="absolute top-1/2 right-4 transform -translate-y-1/2 border p-2 w-10 h-10 rounded-full shadow" id="next">&#10095;</button>
+                </div>
+            </div>
+            
+         </section>
        
 
         
         <!-- product card -->
-        <section class="bg-white lg:h-[450px] p-4 flex items-center justify-center">
-            <div id="autoWidth-2" class="">
+        <section class="bg-white lg:h-[450px] p-4 flex justify-center">
+            <div id="autoWidth-2" class="space-x-2">
                 <!-- product-1 -->
-                <div class="relative flex items-end justify-center overflow-hidden w-72 md:w-80 lg:h-[450px] lg:w-[450px]">
+                <div class="relative flex items-end justify-center overflow-hidden w-72 md:w-80 lg:h-[405px] lg:w-[405px]">
                     <img class="" id="img-product" src="images/product-1.jpg">
                     <div class="absolute bottom-8">
                         <!-- Button with hover effect to show the image -->
@@ -237,7 +240,7 @@
                 <!-- ./product-1 -->
 
                 <!-- product-2 -->
-                <div class="relative flex items-end justify-center overflow-hidden w-72 md:w-80 lg:h-[450px] lg:w-[450px]">
+                <div class="relative flex items-end justify-center overflow-hidden w-72 md:w-80 lg:h-[405px] lg:w-[405px]">
                     <img class="" id="img-product" src="images/product-2.jpg">
                     <div class="absolute bottom-8">
                         <!-- Button with hover effect to show the image -->
@@ -250,7 +253,7 @@
                 <!-- ./product-2 -->
 
                 <!-- product-3 -->
-                <div class="relative flex items-end justify-center overflow-hidden w-72 md:w-80 lg:h-[450px] lg:w-[450px]">
+                <div class="relative flex items-end justify-center overflow-hidden w-72 md:w-80 lg:h-[405px] lg:w-[405px]">
                     <img class="" id="img-product" src="images/product-3.jpg">
                     <div class="absolute bottom-8">
                         <!-- Button with hover effect to show the image -->
@@ -263,7 +266,18 @@
                 <!-- ./product-3 -->
 
                 <!-- product-4 -->
-                <div class="relative flex items-end justify-center overflow-hidden w-72 md:w-80 lg:h-[450px] lg:w-[450px]">
+                <div class="relative flex items-end justify-center overflow-hidden w-72 md:w-80 lg:h-[405px] lg:w-[405px]">
+                    <img class="" id="img-product" src="images/product-4.jpg">
+                    <div class="absolute bottom-8">
+                        <!-- Button with hover effect to show the image -->
+                        <button class="button-container">
+                            <span class="button-text">Mango Butter</span>
+                            <img class="button-img" src="images/right-arrow-svgrepo-com.png" alt="Arrow">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative flex items-end justify-center overflow-hidden w-72 md:w-80 lg:h-[405px] lg:w-[405px]">
                     <img class="" id="img-product" src="images/product-4.jpg">
                     <div class="absolute bottom-8">
                         <!-- Button with hover effect to show the image -->
@@ -428,14 +442,14 @@
                         <div class="lg:space-y-4">
                             <span class="text-xl text-green-600">Benefit</span>
                             <h1 class="text-4xl font-semibold">Safe and effective</h1>
-                            <p class="text-md font-semibold">Natural botanical products are becoming increasingly popular as people look to reduce their use of synthetic chemicals.</p>
+                            <p class="text-md font-normal pt-4">Natural botanical products are becoming increasingly popular as people look to reduce their use of synthetic chemicals.</p>
                         </div>
-                        <div class="flex-1 grid grid-cols-1 md:grid-cols-2">
+                        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 px-4">
                             <div class=" h-16 flex items-center">
                                 <div class="w-16 icon">
                                     <img class="icon-image" src="images/i-2_30x_a93b86de-6635-4f43-97ea-9135cf3ff984_30x.png">
                                 </div>
-                                <div>
+                                <div class="text-sm">
                                     100% Raw Shea butter
                                 </div>
                             </div>
@@ -443,7 +457,7 @@
                                 <div class="w-16 icon">
                                     <img class="icon-image" src="images/i-2_30x_a93b86de-6635-4f43-97ea-9135cf3ff984_30x.png">
                                 </div>
-                                <div>
+                                <div class="text-sm">
                                     100% Raw Shea butter
                                 </div>
                             </div>
@@ -451,7 +465,7 @@
                                 <div class="w-16 icon">
                                     <img class="icon-image" src="images/i-2_30x_a93b86de-6635-4f43-97ea-9135cf3ff984_30x.png">
                                 </div>
-                                <div>
+                                <div class="text-sm">
                                     100% Raw Shea butter
                                 </div>
                             </div>
@@ -459,7 +473,7 @@
                                 <div class="w-16 icon">
                                     <img class="icon-image" src="images/i-2_30x_a93b86de-6635-4f43-97ea-9135cf3ff984_30x.png">
                                 </div>
-                                <div>
+                                <div class="text-sm">
                                     100% Raw Shea butter
                                 </div>
                             </div>
@@ -467,7 +481,7 @@
                                 <div class="w-16 icon">
                                     <img class="icon-image" src="images/i-2_30x_a93b86de-6635-4f43-97ea-9135cf3ff984_30x.png">
                                 </div>
-                                <div>
+                                <div class="text-sm">
                                     100% Raw Shea butter
                                 </div>
                             </div>
@@ -475,7 +489,7 @@
                                 <div class="w-16 icon">
                                     <img class="icon-image" src="images/i-2_30x_a93b86de-6635-4f43-97ea-9135cf3ff984_30x.png">
                                 </div>
-                                <div>
+                                <div class="text-sm">
                                     100% Raw Shea butter
                                 </div>
                             </div>
@@ -851,12 +865,12 @@
                     </div>
 
                     <!-- Column 4 -->
-                    <div class="hidden lg:block space-y-10">
+                    <div class="hidden xl:block space-y-10">
                         <h3 class="text-lg font-semibold mb-4 text-primary">NEWSLETTER</h3>
                         <ul>
                             <li><a href="#" class="font-thin hover:text-primary">Sign up for Our Newsletter & Promotions</a></li>
                         </ul>
-                        <div class="lg:w-w-120 bg-blue-600 h-12 flex flex-row">
+                        <div class="lg:w-96 bg-blue-600 h-12 flex flex-row">
                             <input class="flex-1 text-black p-6" placeholder="search" type="search" >
                             <button class="button-container-1">
                                 <span class="button-text-1">Subscribe</span>
@@ -877,13 +891,6 @@
         <!-- ./footer -->
 
 
-
-
-
-
-    <section class=" bg-red-700">
-       
-    </section>
     <script
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="

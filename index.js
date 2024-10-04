@@ -1,20 +1,5 @@
 
 
-const btn = document.getElementById('btn');
-const btn2 = document.getElementById('btn-2');
-const menu = document.getElementById('menu-ul');
-const menuIcon = document.getElementById('menu-icon');
-const closeIcon = document.getElementById('close-icon');
-
-btn.addEventListener('click', () => {
-  // Toggle the menu visibility
-  menu.classList.toggle('hidden');
-
-  // Toggle between menu and close icons
-  menuIcon.classList.toggle('hidden');
-  closeIcon.classList.toggle('hidden');
-});
-
 
 // mobile toggle
 document.getElementById('menu-toggle').addEventListener('click', function () {
@@ -23,30 +8,26 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slider img');
-    let currentIndex = 0;
-    const totalSlides = slides.length;
 
-    // Update slider position
-    function updateSliderPosition() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+const slider = document.getElementById('slider');
+const images = slider.children;
+const totalImages = images.length;
+let currentIndex = 0;
 
-    // Next button functionality
-    document.getElementById('next').addEventListener('click', function () {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateSliderPosition();
-    });
+function updateSlider() {
+    const offset = -currentIndex * 100; // Move to the correct image
+    slider.style.transform = `translateX(${offset}%)`;
+}
 
-    // Previous button functionality
-    document.getElementById('prev').addEventListener('click', function () {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateSliderPosition();
-    });
+document.getElementById('next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateSlider();
 });
 
+document.getElementById('prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    updateSlider();
+});
 
 
 
