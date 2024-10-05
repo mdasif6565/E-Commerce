@@ -9,8 +9,8 @@
 </head>
 <body class="relative">
     <div class="">
-        <!-- mobile header -->
-        <section>
+            <!-- mobile header -->
+            <section>
             <!-- mobile header -->
             <header class="bg-white shadow-md lg:hidden">
                 <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -41,7 +41,7 @@
                     </nav>
     
                     <!-- Mobile Menu -->
-                    <div class="lg:hidden hidden absolute top-16 left-0 w-full bg-white shadow-md py-4" id="mobile-menu">
+                    <div class="lg:hidden hidden absolute top-16 left-0 w-full bg-white z-10 shadow-md py-4" id="mobile-menu">
                         <nav class="flex flex-col items-center space-y-4">
                             <a href="#" class="text-gray-700 hover:text-primary transition">Home</a>
                             <a href="#" class="text-gray-700 hover:text-primary transition">About</a>
@@ -267,13 +267,13 @@
 
 
 
-        <!-- footer -->
-        <footer class="bg-secondary-light text-white py-8 h-[500px]">
-            <div class="container">
+         <!-- footer -->
+         <footer class="bg-secondary-light text-white py-8 h-[500px]">
+            <div class="container px-4">
             <!-- Footer Columns -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     <!-- Column 1 -->
-                    <div>
+                    <div class="">
                         <h3 class="text-lg font-semibold mb-4 text-primary">INFORMATION</h3>
                         <ul class="space-y-2">
                             <li><a href="#" class="font-thin hover:text-primary">About Mine Botanicals</a></li>
@@ -289,7 +289,7 @@
                         <ul class="space-y-2">
                             <li><a href="contact.html" class="font-thin hover:text-primary">Contact Us</a></li>
                             <li><a href="#" class="font-thin hover:text-primary">Return Policy</a></li>
-                            <li><a href="#" class="font-thin hover:text-primary">Site Map</a></li>
+                            <li><a href="register.html" class="font-thin hover:text-primary">Register</a></li>
                         </ul>
                     </div>
 
@@ -304,18 +304,17 @@
                     </div>
 
                     <!-- Column 4 -->
-                    <div class="hidden xl:block space-y-10">
+                    <div class="hidden md:block space-y-10">
                         <h3 class="text-lg font-semibold mb-4 text-primary">NEWSLETTER</h3>
                         <ul>
                             <li><a href="#" class="font-thin hover:text-primary">Sign up for Our Newsletter & Promotions</a></li>
                         </ul>
-                        <div class="lg:w-96 bg-blue-600 h-12 flex flex-row">
-                            <input class="flex-1 text-black p-6" placeholder="search" type="search" >
-                            <button class="button-container-1">
-                                <span class="button-text-1">Subscribe</span>
-                                <img class="button-img-1" src="images/right-arrow-svgrepo-com.png" alt="Arrow">
-                            </button>
+                        <div class="lg:w-64 relative">
+                            <input class="w-full text-black px-6 py-3" placeholder="search" type="search">
+                            <button class="h-full bg-primary px-4 py-2 absolute right-0">Subscribe</button>
                         </div>
+                        
+                        
                         <div class="flex items-center gap-x-6">
                             <div class="w-4 h-4 flex justify-center items-center rounded-full"><a href="#" class="w-6 h-6 rounded-full "><img class="w-full" src="images/facebook-176-svgrepo-com.png" alt="Facebook logo"></a></div>
                             <div class="w-4 h-4 flex justify-center items-center rounded-full"><a href="#" class="w-6 h-6 rounded-full "><img class="w-full" src="images/instagram-svgrepo-com.png" alt="instagram logo"></a></div>
@@ -328,7 +327,6 @@
             </div>
         </footer>
         <!-- ./footer -->
-
 
         
 

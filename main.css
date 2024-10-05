@@ -95,7 +95,7 @@
   @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
 */
 .button-container {
-  @apply relative inline-flex items-center bg-[white] transition-[background-color] duration-[0.3s] ease-[ease-in-out] cursor-pointer border px-10 py-3 border-solid border-transparent hover:bg-neutral-100;
+  @apply relative inline-flex items-center bg-[white] transition-[background-color] duration-[0.3s] ease-[ease-in-out] cursor-pointer border px-6 py-2 border-solid border-transparent hover:bg-neutral-100;
   /* Adjust the padding as needed */
   /* Add border for better appearance */
 }
@@ -118,7 +118,7 @@
   @apply opacity-100;
 }
 .button-box {
-  @apply relative inline-flex items-center bg-transparent transition-[background-color] duration-[0.3s] ease-[ease-in-out] cursor-pointer px-10 py-3 border-2 border-solid border-[black] hover:bg-[black] hover:text-[white];
+  @apply relative inline-flex items-center bg-transparent transition-[background-color] duration-[0.3s] ease-[ease-in-out] cursor-pointer px-6 lg:px-10 py-3 border-2 border-solid border-[black] hover:bg-[black] hover:text-[white];
   /* Adjust the padding as needed */
   /* Add border for better appearance */
 }
@@ -155,7 +155,7 @@
   @apply -translate-x-2.5;
 }
 .button-img-1 {
-  @apply w-4 h-4 opacity-0 transition-opacity duration-[0.3s] ease-[ease-in-out] ml-2;
+  @apply opacity-0 transition-opacity duration-[0.3s] ease-[ease-in-out] ml-2;
   /* Adjust size as needed */
   /* Adjust size as needed */
   /* Adjust spacing as needed */
@@ -179,6 +179,9 @@
   /* Adjust height as needed */
   perspective: 1000px;
   /* Add perspective to the flip effect */
+}
+.flip-p{
+  @apply text-xs;
 }
 .flip-card-inner {
   @apply absolute w-full h-full transition-transform duration-[0.9s];

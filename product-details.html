@@ -12,7 +12,7 @@
         <!-- mobile header -->
         <section>
             <!-- mobile header -->
-            <header class="bg-white shadow-md lg:hidden">
+            <header class="bg-white shadow-md md:hidden">
                 <div class="container mx-auto px-4 py-4 flex justify-between items-center">
                     <!-- Logo -->
                     <div class="text-2xl font-bold">
@@ -53,26 +53,34 @@
             </header>
             <!-- ./mobile header -->
     
-            </section>
-            <!-- ./mobile header -->
+        </section>
+        <!-- ./mobile header -->
     
-    
-            <!-- header -->
-            <section class="h-36 hidden lg:block">
-                <header class=" h-full w-full px-20 py-6">
-                    <div class="h-full w-full flex flex-row">
-                        <!-- logo -->
-                        <div class="w-[350px]">
-                            <div class="h-full">
-                                <img class="h-full" src="images/logo.png">
-                            </div>
+        <!-- desktop header -->
+        <section>
+            <header class="h-36 hidden md:block md:flex items-center">
+                <div class="container h-[86px] p-0 flex">
+                    <div class="w-64 h-full px-2">
+                        <div class="h-full">
+                            <img class="h-full" src="images/logo.png">
                         </div>
-                        <!-- ./logo -->
-    
+                    </div>
+                    <div class="flex justify-center items-center flex-1">
+                        <!-- menu icon -->
+                         <div class="w-full h-full hidden md:block lg:hidden">
+                            <div class="w-full h-full flex items-center justify-center">
+                                <div class="w-6" >
+                                    <button id="btn">
+                                        <img id="menu-icon" src="images/menu-svgrepo-com.png">
+                                    </button>
+                                </div>
+                            </div>
+
+                         </div>
+                         <!-- ./menu icon -->
                         <!-- nav -->
-                        <div class="flex-1 flex items-center justify-center">
-                            <nav class="h-7">
-                                <ul class="flex space-x-4">
+                            <nav class="h-7 md:hidden lg:block">
+                                <ul class="flex space-x-6">
                                     <!-- home -->
                                     <li>
                                         <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Home</a>
@@ -179,15 +187,15 @@
                                     <!-- ./Essential Oils -->
                                 </ul>
                             </nav>
-                        </div>
                         <!-- ./nav -->
-    
+                    </div>
+                    <div class="w-64 flex items-center justify-end px-4 h-full">
                         <!-- icon and menu bar -->
                         <div class=" flex items-center justify-end">
                             <div class="flex space-x-10">
                                 <div class="w-6">
                                     <img src="images/search-svgrepo-com.png">
-                                   
+                                
                                 </div>
                                 <div class="w-6">
                                     <img src="images/shopping-bag-1143-svgrepo-com.png">
@@ -201,9 +209,11 @@
                         </div>
                         <!-- ./icon and menu bar -->
                     </div>
-                </header>
-            </section>
-            <!-- ./header --> 
+
+                </div>
+            </header>
+        </section>
+        <!-- ./desktop header -->
 
 
         <section class="flex items-center justify-center">
@@ -231,11 +241,11 @@
 
         <!-- footer -->
         <footer class="bg-secondary-light text-white py-8 h-[500px]">
-            <div class="container">
+            <div class="container px-4">
             <!-- Footer Columns -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     <!-- Column 1 -->
-                    <div>
+                    <div class="">
                         <h3 class="text-lg font-semibold mb-4 text-primary">INFORMATION</h3>
                         <ul class="space-y-2">
                             <li><a href="#" class="font-thin hover:text-primary">About Mine Botanicals</a></li>
@@ -251,7 +261,7 @@
                         <ul class="space-y-2">
                             <li><a href="contact.html" class="font-thin hover:text-primary">Contact Us</a></li>
                             <li><a href="#" class="font-thin hover:text-primary">Return Policy</a></li>
-                            <li><a href="#" class="font-thin hover:text-primary">Site Map</a></li>
+                            <li><a href="register.html" class="font-thin hover:text-primary">Register</a></li>
                         </ul>
                     </div>
 
@@ -266,18 +276,17 @@
                     </div>
 
                     <!-- Column 4 -->
-                    <div class="hidden lg:block space-y-10">
+                    <div class="hidden md:block space-y-10">
                         <h3 class="text-lg font-semibold mb-4 text-primary">NEWSLETTER</h3>
                         <ul>
                             <li><a href="#" class="font-thin hover:text-primary">Sign up for Our Newsletter & Promotions</a></li>
                         </ul>
-                        <div class="lg:w-w-120 bg-blue-600 h-12 flex flex-row">
-                            <input class="flex-1 text-black p-6" placeholder="search" type="search" >
-                            <button class="button-container-1">
-                                <span class="button-text-1">Subscribe</span>
-                                <img class="button-img-1" src="images/right-arrow-svgrepo-com.png" alt="Arrow">
-                            </button>
+                        <div class="lg:w-64 relative">
+                            <input class="w-full text-black px-6 py-3" placeholder="search" type="search">
+                            <button class="h-full bg-primary px-4 py-2 absolute right-0">Subscribe</button>
                         </div>
+                        
+                        
                         <div class="flex items-center gap-x-6">
                             <div class="w-4 h-4 flex justify-center items-center rounded-full"><a href="#" class="w-6 h-6 rounded-full "><img class="w-full" src="images/facebook-176-svgrepo-com.png" alt="Facebook logo"></a></div>
                             <div class="w-4 h-4 flex justify-center items-center rounded-full"><a href="#" class="w-6 h-6 rounded-full "><img class="w-full" src="images/instagram-svgrepo-com.png" alt="instagram logo"></a></div>
