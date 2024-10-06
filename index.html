@@ -18,8 +18,8 @@
                         <div class="text-2xl font-bold">
                             <img class="w-24" src="images/logo.png">
                         </div>
-                        <div class="w-full h-10 relative">
-                            <input class="w-full h-full px-2 text-xs bg-gray-200 outline-none rounded-full" type="search" placeholder="What are looking for">
+                        <div class="w-full h-10 relative ml-2 mr-2">
+                            <input class="w-full h-full px-2 text-xs bg-gray-100 outline-none rounded-full" type="search" placeholder="What are looking for">
                             <div class="w-4 absolute right-5 top-3">
                                 <img src="images/search-svgrepo-com.png">
                             </div>
@@ -36,15 +36,15 @@
                          <!-- The menu here -->
                         <div id="side-menu" class="fixed top-0 right-[-250px] w-[240px] h-screen z-50 bg-white shadow p-5
                         flex flex-col space-y-5 text-black duration-300">
-                            <a href="javascript:void(0)" class="text-center text-4xl" onclick="closeMenu()">&times;</a>
+                            <a href="javascript:void(0)" class="text-center text-xl" onclick="closeMenu()">&times;</a>
                             <!-- home -->
                             <li class="list-none">
-                                <a class="text-lg transition duration-200 ease-in-out font-medium" href="#">Home</a>
+                                <a class="text-sm transition duration-200 ease-in-out font-medium" href="#">Home</a>
                             </li>
                             <!-- ./home -->
                             <!-- Natural Products -->
                             <li class="relative group list-none">
-                                <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="product-list-page.html">Natural Products</a>
+                                <a class="text-sm hover:text-primary transition duration-200 ease-in-out font-medium" href="product-list-page.html">Natural Products</a>
                                 <div class="w-80 h-32 z-10 hidden absolute flex items-end">
                                     <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
                                         <ul class="space-y-4 pt-2">
@@ -57,7 +57,7 @@
                             <!-- ./Natural Products -->
                             <!-- Bath -->
                             <li class="relative group list-none">
-                                <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Bath</a>
+                                <a class="text-sm hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Bath</a>
                                 <div class="w-80 z-10 hidden absolute flex items-end">
                                     <div class="w-80 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
                                         <ul class="space-y-4 py-2">
@@ -76,7 +76,7 @@
                             </li>
                             <!-- ./Bath -->
                             <li class="relative group list-none">
-                                <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Body Products</a>
+                                <a class="text-sm hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Body Products</a>
                                 
                                 <div class="w-80 h-32 z-10 hidden absolute flex items-end">
                                     <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
@@ -90,7 +90,7 @@
                             
                             <!-- Hair Products -->
                             <li class="relative group list-none">
-                                <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Hair Products</a>
+                                <a class="text-sm hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Hair Products</a>
 
                                 <div class="w-80 h-32 z-10 hidden absolute flex items-end">
                                     <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
@@ -104,7 +104,7 @@
                             <!-- ./Hair Products -->
                             <!-- Aroma -->
                             <li class="relative group list-none">
-                                <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Aroma</a>
+                                <a class="text-sm hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Aroma</a>
                                 <div class="w-80 h-32 z-10 hidden absolute flex items-end">
                                     <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
                                         <ul class="space-y-4 pt-2">
@@ -117,7 +117,7 @@
                             <!-- ./Aroma -->
                             <!-- Fragrance Oil -->
                             <li class="relative group list-none">
-                                <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Fragrance Oil</a>
+                                <a class="text-sm hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Fragrance Oil</a>
                                 <div class="w-80 h-32 z-10 hidden absolute flex items-end">
                                     <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
                                         <ul class="space-y-4 pt-2">
@@ -130,7 +130,7 @@
                             <!-- ./Fragrance Oil -->
                              <!-- Essential Oils -->
                              <li class="list-none">
-                                <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Essential Oils</a>
+                                <a class="text-sm hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Essential Oils</a>
                             </li>
                             <!-- ./Essential Oils -->
                         </div>
@@ -641,8 +641,26 @@
                                     <button class="tab py-2 px-4 focus:outline-none transition duration-300" onclick="showTab('tab3', this)">Massage Oil</button>
                                 </div>
                                 <div class="tab-content mt-4">
-                                    <div id="tab1" class="tab-pane active">
-                                        <ul class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+                                    <div id="tab1" class="tab-pane w-full active">
+                                        <ul class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
+                                            <li class="item-a">
+                                                <div class=" w-48 h-auto lg:w-80 h-ful relative card">
+                                                    <div class="relative h-72 w-full flex justify-center items-center">
+                                                        <img class="lg:w-60 lg:h-60" src="images/product-5.png" alt="Product 1">
+                                                        <div class="contentBx absolute bottom-0 w-full h-24">
+                                            
+                                                         
+                                            
+                                                            <a href="#"><img class="w-6" src="images/plus-large-svgrepo-com.png"></a>
+                                                            <a href="#"><img class="w-6" src="images/eye-open-svgrepo-com.png"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="px-4">
+                                                        <p class="text-xl hover:text-primary cursor-pointer">Mango Butter Whipped Shea Butter</p>
+                                                        <p>$11.9</p>
+                                                    </div>
+                                                </div>
+                                            </li>
                                             <li class="item-a">
                                                 <div class=" w-48 h-auto lg:w-80 h-ful relative card">
                                                     <div class="relative h-72 w-full flex justify-center items-center">
@@ -825,9 +843,9 @@
         
                 <!-- Safe and effective -->
                  <section>
-                    <div class="flex items-center justify-center">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 lg:w-[1305px] lg:h-[600px] lg:my-16 lg:mx-16">
-                            <div class="flex items-center justify-center w-full p-4 lg:w-1/2">
+                    <div class=" flex items-center justify-center">
+                        <div class=" grid grid-cols-1 lg:grid-cols-2 lg:w-[1305px] lg:h-[600px] lg:my-16 lg:mx-16">
+                            <div class="flex items-center justify-center">
                                 <img class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[482px] lg:h-[482px]" src="images/Yellow_Simple_Aesthetic_Skincare_Product_Benefits_Infographic_Instagram_Post_89_600x.png" alt="Product Image">
                             </div>
         
@@ -1267,7 +1285,7 @@
                                 <ul>
                                     <li><a href="#" class="font-thin hover:text-primary">Sign up for Our Newsletter & Promotions</a></li>
                                 </ul>
-                                <div class="lg:w-64 relative">
+                                <div class="lg:w-64 xl:w-96 relative">
                                     <input class="w-full text-black px-6 py-3" placeholder="search" type="search">
                                     <button class="h-full bg-primary px-4 py-2 absolute right-0">Subscribe</button>
                                 </div>
