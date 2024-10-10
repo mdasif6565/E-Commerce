@@ -57,36 +57,148 @@
             <!-- ./mobile header -->
     
     
-            <!-- header -->
-            <section class="h-36 hidden lg:block">
-                <header class=" h-full w-full px-20 py-6">
-                    <div class="h-full w-full flex flex-row">
-                        <!-- logo -->
-                        <div class="w-[350px]">
-                            <div class="h-full">
-                                <img class="h-full" src="images/logo.png">
-                            </div>
+        <!-- desktop header -->
+        <section>
+            <header class="h-36 hidden md:block md:flex items-center">
+                <div class="container h-[86px] p-0 flex">
+                    <div class="w-64 h-full px-2">
+                        <div class="h-full">
+                            <img class="h-full" src="images/logo.png">
                         </div>
-                        <!-- ./logo -->
-    
+                    </div>
+                    <div class="flex justify-center items-center flex-1">
+                        <!-- menu icon -->
+                            <div class="w-full h-full hidden md:block xl:hidden">
+                            <div class="w-full h-full flex items-center justify-center">
+                                <div class="w-6" >
+                                    <button  onclick="openMenu2()" id="btn">
+                                        <img id="menu-icon" src="images/menu-svgrepo-com.png">
+                                    </button>
+                                </div>
+
+                                                                    <!-- The menu here -->
+                                <div id="side-menu-2" class="fixed top-0 left-[-250px] w-[240px] h-screen z-50 bg-white shadow p-5
+                                    flex flex-col space-y-5 text-black duration-300">
+                                    <a href="javascript:void(0)" class="text-center text-4xl" onclick="closeMenu2()">&times;</a>
+                                    <!-- home -->
+                                    <li class="list-none">
+                                        <a class="text-lg transition duration-200 ease-in-out font-medium" href="#">Home</a>
+                                    </li>
+                                    <!-- ./home -->
+                                    <!-- Natural Products -->
+                                    <li class="relative group list-none">
+                                        <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="product-list-page.html">Natural Products</a>
+                                        <div class="w-80  z-10 hidden absolute flex items-end">
+                                            <div class="w-80 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
+                                                <ul class="space-y-4 pt-2">
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Shea Butter</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Raw Black Soap</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ./Natural Products -->
+                                    <!-- Bath -->
+                                    <li class="relative group list-none">
+                                        <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Bath</a>
+                                        <div class="w-80 z-10 hidden absolute flex items-end">
+                                            <div class="w-80 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
+                                                <ul class="space-y-4 py-2">
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">Bath Salt</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">Body Wash</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">Body Scrubs</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">Liquid Black Soap</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">Massage Oil</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">Shampoo</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">Shower Gel</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">Handmade Soap</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">Bar Soap</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ./Bath -->
+                                    <li class="relative group list-none">
+                                        <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Body Products</a>
+                                        
+                                        <div class="w-80 h-32 z-10 hidden absolute flex items-end">
+                                            <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
+                                                <ul class="space-y-4 pt-2">
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Shea Butter</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Raw Black Soap</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <!-- Hair Products -->
+                                    <li class="relative group list-none">
+                                        <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Hair Products</a>
+        
+                                        <div class="w-80 h-32 z-10 hidden absolute flex items-end">
+                                            <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
+                                                <ul class="space-y-4 pt-2">
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Shea Butter</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Raw Black Soap</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ./Hair Products -->
+                                    <!-- Aroma -->
+                                    <li class="relative group list-none">
+                                        <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Aroma</a>
+                                        <div class="w-80 h-32 z-10 hidden absolute flex items-end">
+                                            <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
+                                                <ul class="space-y-4 pt-2">
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Shea Butter</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Raw Black Soap</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ./Aroma -->
+                                    <!-- Fragrance Oil -->
+                                    <li class="relative group list-none">
+                                        <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Fragrance Oil</a>
+                                        <div class="w-80 h-32 z-10 hidden absolute flex items-end">
+                                            <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
+                                                <ul class="space-y-4 pt-2">
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Shea Butter</a></li>
+                                                    <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Raw Black Soap</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ./Fragrance Oil -->
+                                    <!-- Essential Oils -->
+                                    <li class="list-none">
+                                        <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Essential Oils</a>
+                                    </li>
+                                    <!-- ./Essential Oils -->
+                                </div>
+                            </div>
+
+                            </div>
+                            <!-- ./menu icon -->
                         <!-- nav -->
-                        <div class="flex-1 flex items-center justify-center">
-                            <nav class="h-7">
-                                <ul class="flex space-x-4">
+                            <nav class="h-7 md:hidden xl:block">
+                                <ul class="flex space-x-6">
                                     <!-- home -->
                                     <li>
-                                        <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="#">Home</a>
+                                        <a class="text-lg text-primary transition duration-200 ease-in-out font-medium" href="#">Home</a>
                                     </li>
                                     <!-- ./home -->
     
                                     <!-- Natural Products -->
                                     <li class="relative group">
                                         <a class="text-lg hover:text-primary transition duration-200 ease-in-out font-medium" href="product-list-page.html">Natural Products</a>
-                                        <div class="w-80 h-32 z-10 hidden absolute flex items-end">
-                                            <div class="w-80 h-20 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
-                                                <ul class="space-y-4 pt-2">
+                                        <div class="w-80 z-10 hidden absolute flex items-end">
+                                            <div class="w-80 mt-8 group-hover:block px-4 bg-white box-shadow-custom  z-10 border-t-2 border-gray-200">
+                                                <ul class="space-y-4 py-4">
                                                     <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Shea Butter</a></li>
                                                     <li><a class="font-medium hover:text-primary transition duration-200 ease-in-out" href="#">African Raw Black Soap</a></li>
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -179,31 +291,45 @@
                                     <!-- ./Essential Oils -->
                                 </ul>
                             </nav>
-                        </div>
                         <!-- ./nav -->
-    
+                    </div>
+                    <div class="w-64 flex items-center justify-end px-4 h-full">
                         <!-- icon and menu bar -->
                         <div class=" flex items-center justify-end">
                             <div class="flex space-x-10">
                                 <div class="w-6">
                                     <img src="images/search-svgrepo-com.png">
-                                   
+                                
                                 </div>
                                 <div class="w-6">
                                     <img src="images/shopping-bag-1143-svgrepo-com.png">
                                 </div>
                                 <div class="w-6" >
-                                    <button id="btn">
+                                    <button  onclick="openMenu1()" id="btn">
                                         <img id="menu-icon" src="images/menu-svgrepo-com.png">
                                     </button>
                                 </div>
                             </div> 
                         </div>
                         <!-- ./icon and menu bar -->
+                                    <!-- The menu here -->
+                        <div id="side-menu-1" class="fixed top-0 right-[-440px] w-[440px] h-screen z-50 bg-white shadow p-10
+                            flex flex-col space-y-10 text-black duration-300">
+                            <a href="javascript:void(0)" class="text-center text-4xl" onclick="closeMenu1()">&times;</a>
+                            <a class="hover:text-primary hover:transition" href="login.html">Log in</a>
+                            <a class="hover:text-primary hover:transition" href="register.html">Register account</a>
+                            <a class="hover:text-primary hover:transition" href="contact.html">Contact Us</a>
+                            <a class="hover:text-primary hover:transition" href="#">Cheak Out</a>
+                        </div>
+
+                            
                     </div>
-                </header>
-            </section>
-            <!-- ./header -->
+
+                </div>
+            </header>
+        </section>
+        <!-- ./desktop header -->
+
         <!-- home -->
         <section class="flex items-center justify-center w-full h-40">
             <img class="w-full md:w-full lg:w-full h-full" src="images/banner-8- Copy.jpg">
